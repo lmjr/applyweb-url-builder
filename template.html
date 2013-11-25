@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Applyweb URL Builder</title>
+<meta name="author" content="Luis Mauricio, @lmjr" />
+
+<link rel="stylesheet" href="css/applyweb.css"></style>
+<script language="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script language="javascript" src="js/applyweb.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="main">
+    <form role="form" id="applyweb" action="#">
+      <h1>Applyweb URL Builder</h1>
+      <p>Create a custom give campaign URL with preset form options.</p>
+      <!-- 1. Applyweb form -->
+      <h2>Step 1</h2>
+      <h3>Campaign Form</h3>
+        <ul>
+          <li>
+            <input type="radio" name="awc_form" id="r1" value="sfubehve"> <label for="r1">Students First Campaign</label>
+          </li><li>
+            <input type="radio" name="awc_form" id="r2" value="sfubusns"> <label for="r2">College of Business</label>
+          </li><li>
+            <input type="radio" name="awc_form" id="r3" value="sfuethn"> <label for="r3">College of Ethnic Studies</label>
+          </li><li>
+            <input type="radio" name="awc_form" id="r4" value="sfuhealt"> <label for="r4">College of Health and Social Sciences</label>
+          </li><li>
+            <input type="radio" name="awc_form" id="r5" value="sfuhuman"> <label for="r5">College of Liberal and Creative Arts</label>
+          </li><li>
+            <input type="radio" name="awc_form" id="r6" value="sfusceng"> <label for="r6">College of Science and Engineering</label>
+          </li><li>
+            <input type="radio" name="awc_form" id="r7" value="sfueduca"> <label for="r7">Graduate College of Education</label>
+          </li><li>
+            <input type="radio" name="awc_form" id="r8" value="sfudonat"> <label for="r8">Office of University Development</label>
+          </li></ul>
+        <!-- 2. Recipient fields -->
+        <h2>Step 2</h2>
+        <h3>Campaign Fund</h3>
+          <label for="awc_fund_other">Campaign fund</label>
+          <input name="awc_fund_other" type="text" id="awc_fund_other" />
+          <p>e.g. The Raul Ramirez Diversity in Journalism Fund</p>
+        <h3>Campaign Gift (optional)</h3>
+          <label for="awc_gift_other">Campaign gift (optional)</label>
+          <span>$</span><input name="awc_gift_other" id="awc_gift_other" type="number" min="0" step="25" />
+          <p>e.g. 100</p>
+        <!-- 3. Link output -->
+        <h2>Step 3</h2>
+        <label for="awc_output">Campaign URL</label>
+          <textarea name="awc_output" id="awc_output" rows="5" readonly="readonly"></textarea>
+    </form>
+    <h2>Reference</h2>
+    <dl>
+      <dt>Campaign Form</dt>
+      <dd>Required. Identify the Applyweb donation form to be used for campaign. Example: <em>sfudonat</em> (i.e. <a href="https://www.applyweb.com/public/contribute?s=sfudonat">Office of University Development</a>)</dd>
+      <dt>Campaign Fund</dt>
+      <dd>Recommended. Identify a specific fund for the campaign. Example: <em>The Raul Ramirez Diversity in Journalism Fund</em></dd>
+      <dt>Campaign Gift</dt>
+      <dd>Specify a suggested gift amount. Example: <em>100</em></dd>
+    </dl>
+  </div>
+</body>
+</html>
